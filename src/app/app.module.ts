@@ -1,18 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {RedirectorComponent} from './redirector/redirector.component';
+import {GalleryModule} from './gallery/gallery.module';
+import {GalleryConfig} from './gallery/token';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RedirectorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GalleryModule,
   ],
-  providers: [],
+  providers: [
+    {provide: GalleryConfig, useValue: 'toandz'}
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
