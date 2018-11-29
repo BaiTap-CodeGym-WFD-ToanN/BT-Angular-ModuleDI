@@ -18,7 +18,7 @@ import {GalleryConfig} from './gallery/token';
     GalleryModule,
   ],
   providers: [
-    {provide: GalleryConfig, useValue: 'toandz'}
+    {provide: GalleryConfig, useValue: 3}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-slide',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slide.component.css']
 })
 export class SlideComponent implements OnInit {
+  @ViewChild('template') template: TemplateRef<any>;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
